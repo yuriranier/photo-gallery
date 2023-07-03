@@ -231,37 +231,6 @@ h1 {
   color: var(--dark-gray);
 }
 
-/* Loader */
-.loader {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.loader img {
-  background-color: transparent;
-}
-
-.loader-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.loader-text {
-  font-family: var(--title-font);
-  color: var(--dark-gray);
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  text-align: center;
-  margin: 0;
-}
-
 @media only screen and (min-width: 1500px) {
   header,
   .image-container {
