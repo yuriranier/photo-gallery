@@ -119,7 +119,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//  Event listener for click on Light / Dark mode
+//  Event listener for click on Light/Dark mode
 document.getElementById("mode-icon").classList.add("fa-moon");
 
 modeBtn.addEventListener("click", function () {
