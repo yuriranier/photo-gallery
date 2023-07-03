@@ -2,7 +2,6 @@ import { count, apiKey } from "./config.js";
 
 const modeBtn = document.getElementById("mode-btn");
 const imageContainer = document.getElementById("image-container");
-const loader = document.getElementById("loader");
 let ready = false;
 let imagesLoaded = 0;
 let totalImages = 0;
@@ -27,7 +26,6 @@ async function getPhotos(query = currentQuery) {
     photosArray = await response.json();
     displayPhotos();
     if (firstLoad) {
-      loader.hidden = true; // Hide the loader after the first load
       firstLoad = false; // Set the flag to false after the first load
     }
   } catch (error) {
@@ -74,8 +72,8 @@ function displayPhotos() {
     itemInfo.appendChild(photoAuthor);
     itemInfo.appendChild(photoDesc);
     // Put img and .item-info inside .grid-item
-    gridItem.appendChild(img);
     gridItem.appendChild(itemInfo);
+    gridItem.appendChild(img);
     // Put .grid-item inside <a>
     link.appendChild(gridItem);
     // Put each <a> inside .image-container
@@ -118,15 +116,6 @@ window.addEventListener("scroll", () => {
     getPhotos(currentQuery);
   }
 });
-
-// // Switch theme dynamically
-// function switchTheme(event) {
-//   if (event.target.checked) {
-//     document.documentElement.setAttribute("data-theme", "dark");
-//   } else {
-//     document.documentElement.setAttribute("data-theme", "white");
-//   }
-// }
 
 //  Event listener for click on Light / Dark mode
 document.getElementById("mode-icon").classList.add("fa-moon");
