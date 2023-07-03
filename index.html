@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com
-    "
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- FontAwesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,10 +12,47 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <title>Infinite Scroll</title>
   </head>
   <body>
-    <!-- Srcipt -->
-    <script src="script.js"></script>
+    <header>
+      <!-- Title -->
+      <div class="title-container">
+        <a href="" class="title-link">
+          <h1 class="title" id="title"></h1>
+        </a>
+      </div>
+      <!-- Search Form -->
+      <div class="search-container">
+        <form class="search-form" id="search-form" autocomplete="off">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Type your search..."
+          />
+          <button class="search-button" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <!-- Button -->
+      <div class="button-container">
+        <a href="#" class="mode-btn" id="mode-btn">
+          <i id="mode-icon" class="mode-icon fa-solid"></i>
+          <span id="mode-text" class="mode-text">Dark Mode</span>
+        </a>
+      </div>
+    </header>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-box">
+        <img src="src/loader.svg" alt="Loading" />
+        <h2 class="loader-text" id="loader-text">loading<br />images</h2>
+      </div>
+    </div>
+    <!-- Image Container -->
+    <div class="image-container" id="image-container"></div>
+    <!-- Script -->
+    <script type="module" src="script/script.js"></script>
   </body>
 </html>
