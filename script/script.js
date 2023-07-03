@@ -119,7 +119,16 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//  Event listener for click on Light/Dark mode
+// // Switch theme dynamically
+// function switchTheme(event) {
+//   if (event.target.checked) {
+//     document.documentElement.setAttribute("data-theme", "dark");
+//   } else {
+//     document.documentElement.setAttribute("data-theme", "white");
+//   }
+// }
+
+//  Event listener for click on Light / Dark mode
 document.getElementById("mode-icon").classList.add("fa-moon");
 
 modeBtn.addEventListener("click", function () {
